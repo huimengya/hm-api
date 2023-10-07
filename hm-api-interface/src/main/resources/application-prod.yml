@@ -1,0 +1,14 @@
+server:
+  port: 4768
+  servlet:
+    context-path: /api
+spring:
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+hm:
+  api:
+    client:
+      access-key: d727b8105xxxx8052a5fcd91
+      secret-key: 72c33a89fxxxx43c5b879231ed
+
