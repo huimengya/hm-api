@@ -28,7 +28,7 @@ spring:
   mail:
     host: smtp.qq.com
     username: 483489278@qq.com
-    password: zlxxxxxhcbcf # 授权码
+    password: xxxxxxxxxxxxx # 授权码
     emailFrom: 483489278@qq.com
     properties:
       mail:
