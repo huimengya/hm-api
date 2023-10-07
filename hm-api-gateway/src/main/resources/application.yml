@@ -1,0 +1,37 @@
+server:
+  port: 4760
+spring:
+  profiles:
+    active: dev
+  cloud:
+    gateway:
+      routes:
+        - id: hm-api-interface
+          uri: http://localhost:4768
+          predicates:
+            - Path=/api/**
+  redis:
+    port: 6379
+    host: localhost
+    database: 0
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway: trace
+
+dubbo:
+  application:
+    qosEnable: false
+    enable-file-cache: false
+    name: dubbo-springboot-demo-provider
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: nacos-registry
+    address: nacos://localhost:8848
+    # 自定义nacos帐号密码
+#    username: test
+#    password: test
